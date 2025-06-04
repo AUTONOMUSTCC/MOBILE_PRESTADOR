@@ -1,0 +1,38 @@
+import React from 'react';
+import { Text, View,} from 'react-native';
+import { Image } from 'expo-image';
+import { Link } from 'expo-router';
+import styles from '@/styles/InicialStyle';
+
+
+export default function Profile(){
+    return(
+        <View styles={styles.container}>
+            <View className="header" styles={styles.head}>
+                <View className="Titulo">
+                    <Text styles={styles.name}>Meu perfil</Text>
+                    <Text styles={styles.type}>Profissional</Text>
+                </View>
+                <View className="settings">
+                    
+                </View>
+            </View>
+            <View className="main">
+                <View className="profilePicture">
+                    <View className="img">
+
+                    </View>
+                    <View className="Maininfos">
+                        <Text styles={styles.name}>LETICIA</Text>
+                        <Text styles={styles.text}>Avaliações</Text>
+                        <Text styles={styles.aval}> (3 Avaliações) </Text>
+                    </View>
+                </View>
+                <View className="informations">
+
+                </View>
+            </View>
+
+        </View>
+    );
+}
