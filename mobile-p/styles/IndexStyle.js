@@ -34,6 +34,7 @@ export default StyleSheet.create({
     logotext: {
       fontSize: 40,
       color: '#000',
+      fontWeight: 'bold',
     },
     us: {
       fontSize: 40,

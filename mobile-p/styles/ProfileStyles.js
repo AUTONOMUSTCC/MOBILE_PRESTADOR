@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Profile from '../app/(tabs)/profile';
+
 
 export default StyleSheet.create({
     //GERAL 

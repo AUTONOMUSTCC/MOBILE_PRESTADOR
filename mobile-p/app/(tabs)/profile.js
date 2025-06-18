@@ -2,11 +2,12 @@ import React from 'react';
 import { Text, View,} from 'react-native';
 import { Image } from 'expo-image';
 import { Link } from 'expo-router';
-import styles from '@/styles/InicialStyle';
 
+import styles from '@/styles/ProfileStyles.js'
 
 export default function Profile(){
     return(
+        
         <View styles={styles.container}>
             <View className="header" styles={styles.head}>
                 <View className="Titulo">

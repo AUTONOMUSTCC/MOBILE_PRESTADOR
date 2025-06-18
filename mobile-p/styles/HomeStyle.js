@@ -1,6 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
-import{width} from '../app/(tabs)/home';
+export const { width } = Dimensions.get('window');
 const widthTotal = Dimensions.get('screen').width;
 const heightTotal = Dimensions.get('screen').height;
 export default StyleSheet.create({ 
@@ -39,10 +39,10 @@ export default StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#fff',
       borderRadius:35,
-      width: '100%',
+      width : width,
     },
     view1: {
-      width: '90%',
+      width: width * 0.9,
       flex:1/10,
     },
     text:{
@@ -98,10 +98,20 @@ export default StyleSheet.create({
     },
     // CARROUSEL
 
-      slide: {
-    width,
+  slide: {
+    height: heightTotal * 0.2,
+    width: width * 0.9,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  card:{
+    height: heightTotal * 0.15,
+    width: width * 0.8,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#A0CEE1',
   },
   image: {
     width: width * 0.8,

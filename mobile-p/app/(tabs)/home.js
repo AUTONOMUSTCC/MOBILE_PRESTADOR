@@ -1,6 +1,6 @@
-import styles from '@/styles/HomeStyles';
-import React , { useRef, useState, useEffect } from "react";
-import { Image, Text, TextInput, View, FlatList, Dimensions} from "react-native";
+import styles from '@/styles/HomeStyle';
+import React, { useEffect, useRef, useState } from "react";
+import { Dimensions, FlatList, Image, Text, TextInput, View } from "react-native";
 //import * as NavigationBar from 'expo-navigation-bar';
 
 //IMAGENS
@@ -9,8 +9,7 @@ const eyeicon = require('@/assets/images/Vector.svg');
 const criaricon = require('@/assets/images/criaricon.svg');
 
 //CONSTS 
-export const { width } = Dimensions.get('window');
-
+const { width } = Dimensions.get('window');
 const data = [
   { id: '1', title: 'Slide 1'},
   { id: '2', title: 'Slide 2'},
@@ -22,7 +21,7 @@ export default function Home(){
     const flatListRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
+   /* useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % data.length;
       flatListRef.current.scrollToIndex({ index: nextIndex, animated: true });
@@ -31,7 +30,7 @@ export default function Home(){
 
     return () => clearInterval(interval);
     }, [currentIndex]);
-
+*/
     const handleScroll = (event) => {
     const index = Math.round(event.nativeEvent.contentOffset.x / width);
     setCurrentIndex(index);
@@ -39,8 +38,9 @@ export default function Home(){
 
     const renderItem = ({ item }) => (
     <View style={styles.slide}>
-      <Image source={{ uri: item.image }} style={styles.image} />
-      <Text style={styles.title}>{item.title}</Text>
+        <View style={styles.card}>
+            <Text style={styles.title}>{item.title}</Text>
+        </View>
     </View>
     );
     return(
@@ -60,7 +60,6 @@ export default function Home(){
                     <Text style={styles.text}>Nossas ferramentas</Text>
                 </View>
                 <View className="carrusel">
-                    
                     <FlatList
                     ref={flatListRef}
                     data={data}
