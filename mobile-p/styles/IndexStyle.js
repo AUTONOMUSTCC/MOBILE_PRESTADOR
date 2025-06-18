@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 
  
 export default StyleSheet.create({
-    container: {
+    container:{
+      borderRadius: 8,
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
@@ -30,7 +31,7 @@ export default StyleSheet.create({
       height: 131,
       contentFit: 'contain',
     },
-    nome: {
+    logotext: {
       fontSize: 40,
       color: '#000',
     },

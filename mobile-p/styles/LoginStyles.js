@@ -8,31 +8,6 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
 
-    //HEADER
-    headerContainer: {
-        padding: 30,
-        flex: 1/5,
-        flexDirection: "row",
-        alignItems: 'start',
-        contentFit: 'top',
-        
-    },
-
-    logo: {
-        width: 25,
-        height: 20.45,
-        contentFit: 'contain',
-    },
-
-    nome: {
-    
-        fontSize: 13,
-        color: '#000',
-    },
-    us:{
-        fontSize: 13,
-        color: '#A0CEE1',
-    },
     //VIEW 2
 
     personagem: {
@@ -51,23 +26,25 @@ export default StyleSheet.create({
     //VIEW 3
 
     view3container: {
+        display: 'flex',
         alignContent: 'center',
         alignItems: 'center',
         flex: 3/5,
     },
     input: {
-        backgroundColor: '#',
+        display: 'flex',
         width: 327,
         height: 40,
         margin: 12,
         borderWidth: 1,
         borderRadius: 10,
-        padding: 10,
+        padding: 5,
+        textAlign: 'left',
     },
 
     //BOTAO
     buttonContainer:{
-        flex: 4/5,
+        flex: 4/4,
         //flexDirection: "column",
         alignItems: 'center',
         justifyContent:'center',
@@ -90,13 +67,15 @@ export default StyleSheet.create({
     //RECUPERAR SENHA
     
     forgotContainer: {
-        flex:5/5,
+        flex:1/2,
         alignItems: 'end',
         justifyContent: 'end',
     },
     forgotBTN:{
         alignItems: 'end',
         justifyContent: 'end',
+        alignContent: 'center',
+        padding: '2%',
     },
     forgot: {
         fontWeight:'bold',

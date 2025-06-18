@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import React from "react";
 import { Pressable, Text, TextInput, View, Alert } from "react-native";
 import styles from "@/styles/LoginStyles";
+import Header from '@/componentes/Header';
 
 
 
@@ -18,7 +19,7 @@ export default function Login() {
   const TESTE = () => {
     
     if (email === 'admin' && senha === '123') {
-     router.push('/inicial');
+     router.push('/home');
     } else {
      erro();
     }
@@ -28,12 +29,7 @@ export default function Login() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.headerContainer}>
-       <Image source={logo} style={styles.logo} />
-       <Text style={styles.nome}>AUTONOM 
-         <Text style={styles.us}> US </Text> 
-       </Text>
-      </View> 
+      <Header></Header>
       
       <View style={styles.view2container}>
         <Image source={personagem} style={styles.personagem} />

@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
+import{width} from '../app/(tabs)/home';
 const widthTotal = Dimensions.get('screen').width;
 const heightTotal = Dimensions.get('screen').height;
 export default StyleSheet.create({ 
@@ -20,8 +21,8 @@ export default StyleSheet.create({
       justifyContent: 'center',
     },
     inputPesquisa:{
-      width:282,
-      height:38,
+      width:'80%',
+      height:'40%',
       backgroundColor: '#fff',
       borderRadius: 8,
       fontSize:10,
@@ -84,9 +85,8 @@ export default StyleSheet.create({
     },
     imgIcon :{
       paddingTop:5,
-      width:22,
-      height:22,
-      contentFit: 'contain',
+      width:32,
+      height:32,
       alignContent:'center',
       alignItems:'center',
     },
@@ -94,8 +94,36 @@ export default StyleSheet.create({
       paddingTop:10,
       textAlign:'justify',
       color:'#666D80',
-      fontSize:8,
+      fontSize:12,
     },
+    // CARROUSEL
 
+      slide: {
+    width,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    width: width * 0.8,
+    height: 200,
+    borderRadius: 10,
+  },
+  title: {
+    marginTop: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  pagination: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  dot: {
+    height: 10,
+    width: 10,
+    backgroundColor: '#333',
+    borderRadius: 5,
+    margin: 5,
+  },
 
  });
