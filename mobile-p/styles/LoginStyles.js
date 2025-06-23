@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+const widthTotal = Dimensions.get("screen").width;
+const heightTotal = Dimensions.get("screen").height;
 
 export default StyleSheet.create({
     container: {
@@ -17,10 +19,12 @@ export default StyleSheet.create({
         ImageContentPosition: 'center',
     },
     
-    view2container: {       
+    view2container: {  
+        display: 'flex',     
         alignContent: 'center',
-        flex: 2/5,
-        backgroundColor: '#fff',
+        width: widthTotal,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     //VIEW 3
@@ -29,7 +33,9 @@ export default StyleSheet.create({
         display: 'flex',
         alignContent: 'center',
         alignItems: 'center',
-        flex: 3/5,
+        width: widthTotal,
+        height: heightTotal * 0.25,
+        paddingTop: 15,
     },
     input: {
         display: 'flex',
@@ -44,7 +50,8 @@ export default StyleSheet.create({
 
     //BOTAO
     buttonContainer:{
-        flex: 4/4,
+        width: widthTotal,
+        height: heightTotal * 0.1,
         //flexDirection: "column",
         alignItems: 'center',
         justifyContent:'center',

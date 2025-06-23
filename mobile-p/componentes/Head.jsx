@@ -1,13 +1,14 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
 import logo from '@/assets/images/logoprestador.png';
+import { Image, StyleSheet, Text, View ,Dimensions} from "react-native";
+const widthTotal = Dimensions.get("screen").width;
+const heightTotal = Dimensions.get("screen").height;
+
 
 const Header = () => {
     return(
         <View style={styles.headerContainer}>
             <Image source={logo} style={styles.logo} />
-            <Text style={styles.nome}>AUTONOM 
-                <Text style={styles.us}> US </Text> 
+            <Text style={styles.nome}>AUTONOM<Text style={styles.us}>US</Text>
             </Text>
         </View>
     )
@@ -15,23 +16,27 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     headerContainer: {
-        padding: 30,
-        flex: 1/4,
+        width: widthTotal,
+        height: heightTotal * 0.05,
+        display: 'flex',
         flexDirection: "row",
-        alignItems: 'start',
-        contentFit: 'top',
-        
+        alignItems: 'center',
+        justifyContent:'center',
+        contentFit: 'top',    
+        position: 'absolute',
+        top: 0,
+
     },
     logo: {
         width: 25,
         height: 20.45,
         contentFit: 'contain',
-
     },
     nome: {
         width: 90,
         height: 20.45,
         color: '#000',
+        margin: 0,
     },
     us: {
         width: 90,

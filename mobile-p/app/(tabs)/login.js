@@ -1,36 +1,29 @@
-import { Image } from "expo-image";
-import { useRouter } from 'expo-router';
-import React from "react";
-import { Pressable, Text, TextInput, View, Alert } from "react-native";
+import Header from "@/componentes/Head";
 import styles from "@/styles/LoginStyles";
-import Header from '@/componentes/Header';
-
-
+import { Image } from "expo-image";
+import { useRouter } from "expo-router";
+import React from "react";
+import { Alert, Pressable, Text, TextInput, View } from "react-native";
 
 //IMAGENS
-const logo = require("@/assets/images/logoprestador.png");
+//const logo = require("@/assets/images/logoprestador.png");
 const personagem = require("@/assets/images/CharacterLogin.png");
 
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [senha, setSenha] = React.useState("");
   const router = useRouter();
-  
-  const TESTE = () => {
-    
-    if (email === 'admin' && senha === '123') {
-     router.push('/home');
-    } else {
-     erro();
-    }
-    
-  }; 
 
+  const TESTE = () => {
+    if (email === "admin" && senha === "123") {
+      router.push("/home");
+    } else {
+      Alert.alert("Atenção", "Usuário ou senha inválidos");
+    }
+  };
   return (
     <View style={styles.container}>
-
-      <Header></Header>
-      
+      <Header />
       <View style={styles.view2container}>
         <Image source={personagem} style={styles.personagem} />
       </View>
@@ -53,20 +46,12 @@ export default function Login() {
             <Text style={styles.forgot}>ESQUECI MINHA SENHA</Text>
           </Pressable>
         </View>
-
-        <View style={styles.buttonContainer}>
-          <Pressable style={styles.button} onPress={TESTE} >          
-            <Text style={styles.text}>ENTRAR</Text>          
-          </Pressable>
-        </View>
       </View>
-
-      
+      <View style={styles.buttonContainer}>
+        <Pressable style={styles.button} onPress={TESTE}>
+          <Text style={styles.text}>ENTRAR</Text>
+        </Pressable>
+      </View>
     </View>
   );
-}
-function erro() {
-  return (
-  Alert.alert('Atenção', 'Usuário ou senha inválidos')
-);
 }

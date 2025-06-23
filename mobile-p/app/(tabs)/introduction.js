@@ -3,6 +3,7 @@ import { Text, View, Pressable} from 'react-native';
 import { Image } from 'expo-image';
 import styles from '@/styles/Introstyle';
 import { Link } from 'expo-router';
+import Header from "@/componentes/Head.jsx";
 
 
 //IMAGENS
@@ -13,7 +14,7 @@ const introd = require('@/assets/images/EquipeIntro.png');
 export default function Intro(){
     return(
         <View  style={styles.container}>
-
+            <Header/>
             <View className='viewimg' style={styles.viewimg}>
                 <Image source={introd} style={styles.introducao}/>   
             </View>
