@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/CharacterLogin.png",
-    "scheme": "mobilep",
+    "scheme": "AutonomUs",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/CharacterLogin.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
@@ -44,6 +44,6 @@
         "projectId": "d041458e-72a1-42d5-8579-85481ec7d422"
       }
     },
-    "owner": "jubs24"
+    "owner": "lisa"
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View,} from 'react-native';
-import { Image } from 'expo-image';
-import { Link } from 'expo-router';
+
 
 import styles from '@/styles/ProfileStyles.js'
 

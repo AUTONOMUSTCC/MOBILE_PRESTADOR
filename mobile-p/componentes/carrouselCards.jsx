@@ -12,10 +12,10 @@ const { width } = Dimensions.get("screen");
 const heightTotal = Dimensions.get("screen").height;
 const data = [
   {
-    image: require("@/assets/images/logoprestador.png"),
+    image: require("@/assets/images/agendaicone.png"),
     id: "1",
-    title: "slide 1",
-    description: "Descrição do slide 1",
+    title: "Agenda inteligente",
+    description: "Preencha sua agenda com seus horários disponíveis e combine horários com os profissionais",
   },
   {
     image: require("@/assets/images/logoprestador.png"),
@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: 50,
-    height: 50,
+    width: 70,
+    height: 60,
     resizeMode: "contain",
     borderRadius: 8,
   },

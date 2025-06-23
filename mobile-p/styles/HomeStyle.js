@@ -8,6 +8,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#A0CEE1",
+    height: heightTotal *0.8,
+    width: widthTotal,
   },
 
   pesquisaContainer: {
@@ -37,7 +39,7 @@ export default StyleSheet.create({
   },
 
   body: {
-    height: heightTotal,
+    height: heightTotal * 1.1,
     width: widthTotal,
     backgroundColor: "#fff",
     borderTopLeftRadius: 35,
@@ -48,7 +50,7 @@ export default StyleSheet.create({
   },
 
   view1: {
-    width: width ,
+    width: width,
     backgroundColor: "#fff",
     borderRadius: 15,
     marginBottom: 20,
@@ -65,7 +67,7 @@ export default StyleSheet.create({
   },
 
   viewcontrolPOSTS: {
-    width: "100%",
+    width: widthTotal * 0.8,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -74,7 +76,7 @@ export default StyleSheet.create({
     borderColor: "#BFBFBF",
     borderWidth: 2,
     borderRadius: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 0,
     marginBottom: 20,
   },
 
@@ -82,25 +84,33 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+    width: width * 0.3,
+    height: heightTotal * 0.09,
   },
 
   centro: {
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+    width: width * 0.3,
+    height: heightTotal * 0.09,
+
   },
 
   esquerda: {
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+    width: width * 0.3,
+    height: heightTotal * 0.09,
   },
 
   textotop: {
     color: "#666D80",
     textAlign: "center",
     fontSize: 12,
-    fontWeight: "bold",
+    paddingBottom: 10,
+    left: 5,
   },
 
   texto: {
@@ -111,14 +121,21 @@ export default StyleSheet.create({
   },
 
   imgIcon: {
-    width: 32,
-    height: 32,
+    backgroundColor: "005500",
+    width: 22,
+    height: 22,
     resizeMode: "contain",
   },
 
   CarouselServicos: {
     width: width,
     marginTop: 0,
+    marginBottom: 0,
+  },
+
+  CarouselCategorias: {
+    width: width,
+    marginTop: 10,
     marginBottom: 0,
   },
 });

@@ -1,64 +1,68 @@
-import styles from "@/styles/HomeStyle";
 import React, { useState } from "react";
-import { Image, ScrollView, Text, TextInput, View } from "react-native";
+import { View, Text, TextInput, ScrollView, Image } from "react-native";
+import styles from "@/styles/HomeStyle";
 import Carrousel from "@/componentes/carrouselCards";
 import CarrouselPop from "@/componentes/carrouselPopular";
+import CarrouselCategorias from "@/componentes/carrouselCategorias";
 
-// IMAGENS
+// Imagens
 const bell = require("@/assets/images/notification.png");
-const eyeicon = require("@/assets/images/Vector.svg");
-const criaricon = require("@/assets/images/criaricon.svg");
+const eyeicon = require("@/assets/images/viewsicone.png");
+const createicon = require("@/assets/images/criaricone.png");
 
-export default function Home() {
+const HomeScreen = () => {
   const [pesquisa, setPesquisa] = useState("");
 
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={{ paddingBottom: 40, alignItems: "center" }}
+      contentContainerStyle={{ paddingBottom: 0, alignItems: "center" }}
     >
       <View style={styles.pesquisaContainer}>
-        <TextInput
-          style={styles.inputPesquisa}
-          placeholder="Pesquise uma categoria"
-          onChangeText={setPesquisa}
-          value={pesquisa}
-        />
+          <TextInput
+            style={styles.inputPesquisa}
+            placeholder="Pesquise uma categoria"
+            onChangeText={setPesquisa}
+            value={pesquisa}
+          />
+
         <Image source={bell} style={styles.bellimg} />
       </View>
 
       {/* Corpo da tela */}
       <View style={styles.body}>
-        {/* Carrossel de ferramentas */}
         <View style={styles.view1}>
           <Text style={styles.text}>Nossas ferramentas</Text>
           <Carrousel />
         </View>
 
-        {/* Seção de controle de postagens */}
         <View style={styles.viewcontrolPOSTS}>
           <View style={styles.direita}>
             <Text style={styles.textotop}>Suas postagens:</Text>
-            <Text>3</Text>
+            <Text contentContainerStyle={{fontWeight: "bold"}}>3</Text>
           </View>
-
           <View style={styles.centro}>
             <Image source={eyeicon} style={styles.imgIcon} />
-            <Text style={styles.texto}>Ver meus anúncios</Text>
+            <Text style={styles.texto} >Ver meus anúncios</Text>
           </View>
-
           <View style={styles.esquerda}>
-            <Image source={criaricon} style={styles.imgIcon} />
+            <Image source={createicon} style={styles.imgIcon} />
             <Text style={styles.texto}>Criar anúncio</Text>
           </View>
         </View>
 
-        {/* Carrossel de serviços populares */}
         <View style={styles.CarouselServicos}>
           <Text style={styles.text}>Serviços mais populares</Text>
           <CarrouselPop />
         </View>
+
+        <View style={styles.CarouselCategorias}>
+          <Text style={styles.text}>Todas as categorias</Text>
+          <CarrouselCategorias />
+        </View>
       </View>
     </ScrollView>
   );
-}
+};
+
+export default HomeScreen;

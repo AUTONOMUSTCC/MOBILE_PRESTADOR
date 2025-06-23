@@ -16,26 +16,22 @@ const data = [
   {
     image: require("@/assets/images/reformas.png"),
     id: "1",
-    title: "Construção e Reformas",
-    description: "Reformas residenciais",
+    title: "Tecnologia e Suporte técnico",
   },
   {
     image: require("@/assets/images/cuidador.png"),
     id: "2",
-    title: "Saúde e Bem-Estar",
-    description: "Cuidador",
+    title: "Saúde e Bem-estar",
   },
   {
     image: require("@/assets/images/limpeza.png"),
     id: "3",
-    title: "Serviços domésticos e Limpeza",
-    description: "Faxina",
+    title: "Construção e Reformas",
   },
   {
     image: require("@/assets/images/EquipeIntro.png"),
     id: "4",
     title: "Slide 4",
-    description: "Descrição do slide 4",
   },
   {
     image: require("@/assets/images/EquipeIntro.png"),
@@ -45,7 +41,7 @@ const data = [
   },
 ];
 
-const CarrouselPop = () => {
+const CarrouselCategorias = () => {
   const flatListRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -58,11 +54,8 @@ const CarrouselPop = () => {
   const renderItem = ({ item }) => (
     <View style={styles.card}>
       <Image source={item.image} style={styles.image} />
-      <View style={styles.textContainer}>
+      <View style={styles.overlay}>
         <Text style={styles.title}>{item.title}</Text>
-        {item.description && (
-          <Text style={styles.description}>{item.description}</Text>
-        )}
       </View>
     </View>
   );
@@ -104,29 +97,41 @@ const styles = StyleSheet.create({
   },
   card: {
     flexDirection: "column",
-    height: heightTotal * 0.3,
-    width: width * 0.5,
+    height: heightTotal * 0.15,
+    width: width * 0.4,
     borderRadius: 16,
     borderColor: "#ECEFF3",
     borderWidth: 1,
     backgroundColor: "#fff",
-    overflow: "hidden", // garante que nada ultrapasse os limites do card
+    overflow: "visible", // garante que nada ultrapasse os limites do card
   },
   image: {
-    flex: 2, // imagem ocupa 2/3 do card
+    flex: 1,
     width: "100%",
-    resizeMode: "cover", // cobre toda a área superior
+    height: "100%",
+    borderRadius: 16,
+    resizeMode: "cover",
   },
+ overlay: {
+  ...StyleSheet.absoluteFillObject, // cobre toda a imagem
+  backgroundColor: "rgba(0, 0, 0, 0.4)", // cor escura semi-transparente
+  justifyContent: "flex-end", // posiciona o texto na parte de baixo
+  alignItems: "flex-start",
+  padding: 10,
+  borderRadius: 16,
+},
   textContainer: {
     flex: 1, // 1/3 do card
     justifyContent: "center",
     alignItems: "flex-start",
     paddingHorizontal: 10,
-    backgroundColor: "#fff",
   },
   title: {
-    fontSize: 10,
-    textAlign: "center",
+    width: width * 0.3,
+    fontSize: 12,
+    color: "#fff",
+    textAlign: "left",
+    fontWeight:"bold",
   },
   description: {
     fontSize: 8,
@@ -148,4 +153,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CarrouselPop;
+export default CarrouselCategorias;

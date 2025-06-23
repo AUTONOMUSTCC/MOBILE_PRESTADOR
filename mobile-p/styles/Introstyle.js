@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 
 export const { width } = Dimensions.get('window');
@@ -13,6 +13,7 @@ export default StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        flex: 1,
     },
     //VIEW IMG 
     viewimg: {
